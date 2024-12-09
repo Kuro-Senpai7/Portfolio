@@ -1,0 +1,265 @@
+/* General Styling */
+body {
+  background-color: #2e1a47;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Wrapper: Grid Layout */
+#wrapper {
+  margin: 120px auto; /* Adjust margin for top section alignment */
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 12px;
+}
+
+/* Header: Fixed at the top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: #4e1f6c;
+  padding: 16px 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: span 12;
+}
+
+/* Name Styling (Left Side) */
+.name-container h1 {
+  font-size: 32px;
+  color: #4e1f6c; /* Purple text */
+  background-color: white; /* White background */
+  padding: 12px 24px;
+  border: 2px solid #4e1f6c; /* Purple outline */
+  border-radius: 50px; /* Bubbly border */
+  margin: 0;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Header Content */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the elements */
+  width: 100%;
+}
+
+/* Navigation Bar */
+nav {
+  flex: 2; /* Takes up more space */
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  text-align: center;
+}
+
+nav a {
+  background-color: white; /* Default white background */
+  color: #4e1f6c; /* Purple text */
+  text-decoration: none;
+  padding: 16px 50px;
+  border-radius: 50px; /* Bubbly shape */
+  border: 2px solid #4e1f6c; /* Purple outline */
+  font-weight: bold;
+  font-size: 20px; /* Larger text size */
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative;
+  width: 75%;
+  margin-left: 70px;
+}
+
+nav a:hover {
+  background: linear-gradient(145deg, #8a2be2, #4e1f6c); /* Stronger purple gradient */
+  color: white; /* White text */
+  border: 2px solid #4e1f6c; /* Purple outline */
+  transform: scale(1.05); /* Slight enlargement on hover */
+  transition: all 1s ease;
+}
+
+/* Download Resume */
+.download-resume {
+  flex: 1; /* Aligns properly with other header items */
+}
+
+.download-resume a {
+  margin-left: 150px;
+  color: #4e1f6c;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid #4e1f6c;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+}
+
+.download-resume a:hover {
+  background: linear-gradient(145deg, #8a2be2, #4e1f6c); /* Same strong purple gradient */
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Sections */
+.section-title {
+  font-size: 36px;
+  color: white; /* White text */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 16px 0;
+  text-align: center;
+  padding: 8px 16px;
+  border: 2px solid white; /* White border around the text */
+  border-radius: 50px; /* Bubble effect */
+  display: inline-block; /* Keeps it tight around the text */
+}
+
+/* Blank Space */
+.blank-space2 {
+  grid-column: span 2;
+}
+
+/* Reel Section */
+.reel-section {
+  grid-column: span 8; /* Centered in the grid */
+  margin: 24px auto;
+  text-align: center;
+}
+
+.reel-section video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+.projects-section {
+  grid-column: span 12;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.project {
+  position: relative;
+  width: 32%; /* One-third of the container width */
+  max-width: 100%;
+  height: 450px; /* Adjusted height */
+  overflow: hidden;
+  border: 4px solid white; /* White border */
+  border-radius: 25px; /* Bubblier border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+  opacity: 0.85;
+  filter: brightness(0.8); /* Adds opacity effect */
+}
+
+.overlay-title {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 30px; /* Spacing between title and lines */
+}
+
+/* Lines on Hover */
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.overlay::before {
+  top: 25%; /* 1/4 from top */
+  left: 0;
+}
+
+.overlay::after {
+  top: 75%; /* 3/4 from top */
+  left: 0;
+}
+
+.project:hover .overlay::before,
+.project:hover .overlay::after {
+  width: 100%; /* Lines fully span across the image */
+  left: 0; /* Start from the edges */
+}
+
+/* Overlay Effect */
+.project .overlay {
+  position: absolute;
+  top: 50%; /* Center the title vertically */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+  opacity: 1; /* Make the overlay visible on hover */
+}
+
+/* Project Border on Hover */
+.project:hover {
+  border-radius: 12px; /* Slight border radius change on hover for soft effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adds subtle shadow on hover */
+}
+
+/* Footer */
+footer {
+  grid-column: span 12;
+  text-align: center;
+  background-color: white;
+  color: #4e1f6c;
+  padding: 40px;
+  border-radius: 15px;
+}

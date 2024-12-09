@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Samuel Villalobos Portfolio Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
+	<link href="final.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Samuel Villalobos Works</h1>
+		</header>
+		<!-- <img class="mainimg" src="Camera.jpg" alt="Camera"> -->
+
+
+		<nav>
+			<ul>
+				<li><a href="Portfolio.html">Main</a></li>
+				<li><a href="Games.html">Games</a></li>
+				<li><a href="Audio.html">Audio</a></li>
+				<li><a href="Aboutme.html">About Me</a></li>
+			</ul>
+		</nav>
+
+
+		<aside class="asideGames">
+
+			<h2>Basic Mechanics</h2>
+
+
+			<video class="asideGamesfloat" width=40% controls loop preload="auto">
+				<source src="Games/Basic Mechanics Showcase.mp4" type="video/mp4">
+			</video>
+
+			<p>Compilation of some the basic mechanics that I learned to do in Unity both in 2D and 3D enviroments.</p>
+
+			<p>The order of the videos showcased are in this order: simple spawn and destory, simple sprite display and
+				animation, projectiles, and enemies on a 2D environment, raycasting and affecting said raycast, using
+				raycasting to pick up and drop items, turning on and off a mesh renderer using a key, and adding simple
+				footsteps audio.</p>
+
+		</aside>
+
+
+		<aside class="asideGames">
+
+			<h2>Treat Collection</h2>
+
+			<iframe class="canvasfloat asideGamesmargin" style="width: 625px; height: 450px; overflow: hidden;" src="https://editor.p5js.org/Kuro-Senpai7/full/z3iLj7eqp"></iframe>
+
+			<p>A game with a theme about dogs featuring my dog as the background for the game, as well as music made by
+				me, and it is about a dog who has an insatiable hunger for dog treats, and everytime he gets full, the
+				dog gets more hungry the next time. </p>
+
+			<p>I used javascript to code the whole game including the character, treats, and changing state machine. I
+				also made the music for each state of the game using a piano, and I used pictures of my dog to keep the
+				dog themed game going. </p>
+
+		</aside>
+
+
+		<aside class="asideGames">
+
+			<h2>First 2D Project</h2>
+
+			<div id="myCarousel5" class="f-carousel asideGamesfloat">
+				<div class="f-carousel__slide"><video class="asideGamesfloat" width=100% controls loop preload="auto">
+						<source src="Games/Project2D/Project 2D.mp4" type="video/mp4">
+					</video></div>
+				<div class="f-carousel__slide"><img src="Games/Project2D/Project 2D Sprites.png" alt="Project Image"></div>
+				<div class="f-carousel__slide"><img src="Games/Project2D/Project 2D Scripts.png" alt="Project Image"></div>
+				<div class="f-carousel__slide"><img src="Games/Project2D/Project 2D Prefabs.png" alt="Project Image"></div>
+			</div>
+
+			<p>First 2D project made in Unity. A space invaders like game where there are random enemies spawning as
+				well as asteroids, and the goal is to survive and score as high as possible. The character is on the
+				bottom and can only move left and right, but it can shoot to gain score, and he has 3 lives before it is
+				game over.</p>
+
+			<p>I scripted all the player and enemy movements. The player can use a and d to move as well as space for
+				shooting projectiles and B for shooting bombs. I scripted randomized patterns and fire rate as well for
+				both the player and the enemies. </p>
+
+
+		</aside>
+
+
+		<aside class="asideGames">
+
+			<h2>Coding Challenge #1 Spring Semester</h2>
+
+
+			<div id="myCarousel" class="f-carousel asideGamesfloat">
+				<div class="f-carousel__slide"><video width=100% controls loop preload="auto">
+						<source src="Games/CG1/Coding Challange 1(Constraints and Wrapping).mp4" type="video/mp4">
+					</video></div>
+				<div class="f-carousel__slide"><img src="Games/CG1/CodingChallenge 1 Scripts.png" alt="Project Image"></div>
+
+			</div>
+
+			<p><span class="audioBold">What was asked to be included:</span> an object controlled by the player that is
+				confined to the bottom half of
+				the screen. This means that when the player is moving up they are stopped at the middle of the screen.
+				When moving down they are stopped at the bottom of the screen. On either side the player's movement
+				should wrap to the other side. So I the player moves past the edge of the scene to the right , they
+				reappear on the left. Multiple objects that moves on their own from the top of the screen to the bottom
+				and wraps around (reappears at the top of the screen)</p>
+
+		</aside>
+
+
+		<aside class="asideGames">
+
+			<h2>Coding Challenge #2 Spring Semester</h2>
+
+
+			<div id="myCarousel2" class="f-carousel asideGamesfloat">
+				<div class="f-carousel__slide"><video width=100% controls loop preload="auto">
+						<source src="Games/CG2/Coding Challange 2(Project 1 Mockup).mp4" type="video/mp4">
+					</video></div>
+				<div class="f-carousel__slide"><img src="Games/CG2/CG2 Prefabs.png" alt="Project Image"></div>
+				<div class="f-carousel__slide"><img src="Games/CG2/CG2 Scripts.png" alt="Project Image"></div>
+			</div>
+
+			<p><span class="audioBold">Expectations:</span> Add Shooting and enemies to your Movement Demo environment.
+				The additions need to
+				demonstrate an understanding of how to get:</p>
+
+			<ul>
+				<li>Spawning of Projectiles. The projectile needs to:</li>
+				<li>move in the pointed direction</li>
+				<li>need to disappear when off the screen</li>
+				<li>needs to disappear when it hits a target (note is may bounce off other objects that aren't targets)
+				</li>
+				<li>spawning and moving of Obstacles/enemies in random patterns</li>
+				<li>select obstacles/enemies can be destroyed by any collision (projectile or player.</li>
+				<li>obstacle/enemy firing projectile</li>
+				<li>player destroyed on collision with obstacle</li>
+			</ul>
+		</aside>
+
+
+		<aside class="asideGames">
+
+			<h2>Coding Challenge #3 Spring Semester</h2>
+
+
+			<div id="myCarousel3" class="f-carousel asideGamesfloat">
+				<div class="f-carousel__slide"><video width=100% controls loop preload="auto">
+						<source src="Games/CG3/CG3.mp4" type="video/mp4">
+					</video></div>
+				<div class="f-carousel__slide"><img src="Games/CG3/CG3 Prefabs.png" alt="Project Image"></div>
+				<div class="f-carousel__slide"><img src="Games/CG3/CG3 Scripts.png" alt="Project Image"></div>
+			</div>
+
+			<p><span class="audioBold">Expectations:</span> Get a capsule to move and Jump (extra credit mouse move
+				camera without changing direction)</p>
+
+			<ul>
+				<li>Use CharacterController Component</li>
+				<li>Make sure your player can go up stairs, ramps but not through walls</li>
+				<li> Make a portal to a second level - NOTE the character needs to remain</li>
+				<li>Create an environment with levels (ramps, stairs etc.) try jumping between ramps</li>
+			</ul>
+
+		</aside>
+
+
+		<aside class="asideGames">
+
+			<h2>Coding Challenge #4 Spring Semester</h2>
+
+
+			<div id="myCarousel4" class="f-carousel asideGamesfloat">
+				<div class="f-carousel__slide"><video width=100% controls loop preload="auto">
+						<source src="Games/CG4/CG4.mp4" type="video/mp4">
+					</video></div>
+				<div class="f-carousel__slide"><img src="Games/CG4/CG4 Prefabs.png" alt="Project Image"></div>
+				<div class="f-carousel__slide"><img src="Games/CG4/CG4 Scripts.png" alt="Project Image"></div>
+				<div class="f-carousel__slide"><img src="Games/CG4/CG4 Sounds.png" alt="Project Image"></div>
+			</div>
+
+			<p><span class="audioBold">Expectations:</span> Add enemies and sounds </p>
+
+			<p>Enemies need to:</p>
+			<ul>
+				<li>Wander the area</li>
+				<li>Chase players at times</li>
+				<li>Be constructed by the elements in the space</li>
+			</ul>
+
+			
+			<p>Sound needs to have</p>
+			<ul>
+				<li>Ambience</li>
+				<li>Character feet sounds (using an array)</li>
+			</ul>
+
+		</aside>
+
+
+		<footer>
+			<p>Copyright Me, Myself, and I
+				<!-- <i class="bi bi-instagram"></i>
+				<a href="https://instagram.com" target="_blank" class="bi bi-instagram icon"></a>
+				<a href="https://www.youtube.com/" target="_blank" class="bi bi-youtube icon"></a>
+				<a href="https://www.tiktok.com/en/" target="_blank" class="bi bi-tiktok icon"></a> -->
+			</p>
+		</footer>
+
+	</div>
+
+	<script>
+		const container = document.getElementById("myCarousel");
+		const options = { infinite: true }; // Makes the carousel not infinitely continue or just wrap to the first picture again
+		new Carousel(container, options);
+
+		const container2 = document.getElementById("myCarousel2");
+		const options2 = { infinite: true }; // Makes the carousel not infinitely continue or just wrap to the first picture again
+		new Carousel(container2, options2);
+
+		const container3 = document.getElementById("myCarousel3");
+		const options3 = { infinite: true }; // Makes the carousel not infinitely continue or just wrap to the first picture again
+		new Carousel(container3, options3);
+
+		const container4 = document.getElementById("myCarousel4");
+		const options4 = { infinite: true }; // Makes the carousel not infinitely continue or just wrap to the first picture again
+		new Carousel(container4, options4);
+
+		const container5 = document.getElementById("myCarousel5");
+		const options5 = { infinite: true }; // Makes the carousel not infinitely continue or just wrap to the first picture again
+		new Carousel(container5, options5);
+	</script>
+</body>
+
+</html>

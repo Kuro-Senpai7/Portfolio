@@ -1,0 +1,232 @@
+/* General Body and Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+
+/* Gradient Background for the Entire Page */
+#wrap {
+    background: linear-gradient(45deg, #6a0dad, #8e44ad, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header Styling */
+header {
+    background-color: #111;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-container h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #6a0dad;
+}
+
+/* Resume Download Link */
+.download-resume a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.download-resume a:hover {
+    border-bottom: 2px solid #6a0dad;
+}
+
+/* Section Titles and Layout */
+h2.section-title, h3.section-title {
+    font-size: 1.5rem;
+    color: #6a0dad;
+    text-align: center;
+    margin-top: 40px;
+    border-bottom: 3px solid #6a0dad;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Project Container Styling */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px;
+}
+
+/* Project Item Styling */
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project a {
+    display: block;
+    text-decoration: none;
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Project Title Underline on Hover */
+.project-title {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.project-title:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6a0dad;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .contact-info a,
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-links a:hover {
+    color: #6a0dad;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 130px;
+    }
+}
