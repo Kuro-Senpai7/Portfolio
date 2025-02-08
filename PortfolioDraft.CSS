@@ -15,7 +15,7 @@
 body {
     background: linear-gradient(45deg, #6a0dad,teal);
     background-size: 400% 400%;
-    animation: gradientShift 45s ease infinite;
+    animation: gradientShift 30s ease infinite;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -49,8 +49,7 @@ header {
     grid-column: span 12;
 }
 
-/* Name Styling (Left Side) */
-.name-container h1 {
+/* .name-container h1 { */
     /* font-size: 32px;
     color: #4e1f6c;
     background-color: white;
@@ -64,7 +63,7 @@ header {
     font-weight: bold;
     letter-spacing: 2px;
     text-decoration: none;  */
-}
+/* } */
 
 .name-container a {
     font-size: 32px;
@@ -169,53 +168,75 @@ nav a:hover {
 
 /* Sections */
 .section-title {
+    grid-column: span 6;
     font-size: 36px;
     color: white; /* White text */
     text-transform: uppercase;
     font-weight: bold;
-    margin: 16px 0;
+    text-align: center;
+    padding: 8px 75px;
+    /* border: 2px solid white;  */
+    border-radius: 50px; /* Bubble effect */
+    letter-spacing: 6px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.small-section-title {
+    grid-column: span 3;
+    font-size: 36px;
+    color: white; /* White text */
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    margin: 6px 0px;
     text-align: center;
     padding: 8px 16px;
-    border: 2px solid white; /* White border around the text */
+    /* border: 2px solid white;  */
     border-radius: 50px; /* Bubble effect */
-    display: inline-block; /*Keeps it tight around the text*/
     letter-spacing: 6px;
 }
 
-h3.section-title {
+h3.small-section-title {
     font-size: 1.5rem;
     color: white;
-    text-align: center;
-    margin-top: 20px;
+    /* text-align: center;
+    margin-top: 20px; */
     border: none;
     border-bottom: 3px solid white;
     border-top: 3px solid white;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    line-height: 7;
+    margin-bottom: 25px;
+    line-height: 3;
+    padding: 10px 40px;
 }
 
 h2.section-title {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: bold;
-    color: white;
-    margin-top: 20px;
+    /* color: white; */
+    margin-top: 50px;
+    /* margin-bottom: 10px; */
     border: none;
     border-bottom: 3px solid white;
-    border-top: 3px solid white;
+    /* border-top: 3px solid white; */
     padding-bottom: 6px;
 }
-
 
 /* Blank Space */
 .blank-space2 {
     grid-column: span 2;
 }
 
+.blank-space3 {
+    grid-column: span 3;
+}
+
 /* Reel Section */
 .reel-section {
-    grid-column: span 8; /* Centered in the grid */
+    grid-column: span 6; /* Centered in the grid */
     margin: 24px auto;
     text-align: center;
 }
@@ -227,27 +248,30 @@ h2.section-title {
     border-radius: 25px; /* Same border-radius as images */
     border: 4px solid white; /* Same border as images */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
 /* Projects Section */
-.projects-section {
-    grid-column: span 12; /* Full width */
+/* .projects-section {
+    grid-column: span 12; 
     margin: 24px 0;
     text-align: center;
-}
+} */
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 40px;
+    /* display: grid; */
+    grid-column:  span 3;
+    /* gap: 5px; */
+    width: 100%;
+    align-items: center;
 }
 
 .project {
+    grid-column: span 4;
     position: relative;
-    width: 280px; /* One-third of the container width */
-    max-width: 100%;
-    height: auto; /* Allow the height to adjust dynamically */
+    width: 96%; 
+    height: 300px;
+    margin: 10px;
     overflow: hidden;
     border: 4px solid black; /* White border */
     border-radius: 25px; /* Bubblier border */
@@ -261,9 +285,9 @@ h2.section-title {
 .project-image {
     position: relative;
     overflow: hidden;
-    height: 200px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
     border-radius: 8px;
-    width: 100%;
+    width: auto;
 }
 
 .project-image img {
@@ -281,16 +305,11 @@ h2.section-title {
 
 .project-container h3 {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .project-container span {
-    letter-spacing: 6px;
-}
-
-.project {
-    width: 100%;
-    max-width: 320px;
+    letter-spacing: 8px;
 }
 
 /* Overlay Effect */
@@ -356,6 +375,25 @@ h2.section-title {
 .project:hover {
     border-radius: 12px; /* Slight border radius change on hover for soft effect */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adds subtle shadow on hover */
+}
+
+.aboutme-section {
+    grid-column: span 8 ;
+    margin: 25px 0px;
+}
+
+.aboutme-section img {
+    text-wrap: right;
+    width: 25%;
+    height: 25%;
+    margin-right: 20px;
+    float: left;
+}
+
+.aboutme-container {
+    width: auto;
+    height: auto;
+    margin: 100px 0px
 }
 
 footer {
